@@ -2,7 +2,7 @@
 function Post (){
     return(
     <div>
-        <h1>NIGGESHWAR</h1>
+        <h1>NIGGESHWAR </h1>
     </div>
     );
 }
