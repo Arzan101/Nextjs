@@ -1,9 +1,12 @@
 import './App.css'
 import Post from './components/post'
 
-function App() {
+function App(props) {
   return( 
-   <Post/>
+    <main>
+    <Post author = "Maximus" body = "Dasimus "/>
+    <Post author = "Maxi" body = "Dasi "/>
+    </main>
   )
 }
 

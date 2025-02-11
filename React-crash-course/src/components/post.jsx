@@ -1,13 +1,14 @@
+import App from "../App";
 
 const names = ['RAJA','DUBLIN'];
 
-function Post (){
+function Post(props){
  
     return(
-        <main>
-        <Post author = "Maximus" body = "Dasimus "/>
-        <Post author = "Maxi" body = "Dasi "/>
-        </main>
+        <div>
+        {props.author}
+        {props.body}
+        </div>
     );
 }
 
