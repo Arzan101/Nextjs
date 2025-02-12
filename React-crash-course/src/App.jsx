@@ -1,9 +1,12 @@
 import './App.css';
-import PostList from './components/postList';
+import Post from './components/post';
+import NewPost from './components/NewPost';
+import PostList from './components/PostList'
 
 function App() {
   return (
    <main>
+   <PostList/>
    </main>
   );
 }
