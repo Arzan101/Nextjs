@@ -1,3 +1,4 @@
+import Post from "./post";
 function PostList() {
     return (
       <ul>
