@@ -4,18 +4,19 @@ import classes from "./postList.module.css";
 import { useState } from "react";
 
 function PostList() {
-  const [enteredBody,setEnteredBody]= useState('');
+  const [enteredBody, setEnteredBody] = useState('');
 
-  function bodyChangeHandler(event){
-    setEnteredBody= event.target.value;
+  function bodyChangeHandler(event) {
+    setEnteredBody(event.target.value);
   }
+
   return (
     <>
-    <NewPost onBodychange={bodyChangeHandler}/>
-    <ul className={classes.posts}>
-      <Post author="Maximus" body={enteredBody} />
-      <Post author="Maxi" body="Dasi" />
-    </ul>
+      <NewPost onBodyChange={bodyChangeHandler} enteredBody={enteredBody} /> {/* Ensure enteredBody is passed */}
+      <ul className={classes.posts}>
+        <Post author="Maximus" body={enteredBody} />
+        <Post author="Maxi" body="Dasi" />
+      </ul>
     </>
   );
 }
