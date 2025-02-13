@@ -2,11 +2,17 @@
 import classes from './NewPost.module.css';
 
 function NewPost() {
+  
+  let enteredBody='';
+
+  function changeBodyHandler(event){
+    enteredBody = event.target.value;
+  }
   return (
     <form className={classes.form}>
       <p>
         <label htmlFor="body">Text</label>
-        <textarea id="body" required rows={3} />
+        <textarea id="body" required rows={3} onChange={changeBodyHandler}/>
       </p>
       <p>
         <label htmlFor="name">Your name</label>
