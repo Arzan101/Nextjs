@@ -6,16 +6,22 @@ import { useState } from "react";
 function PostList() {
   const [enteredBody, setEnteredBody] = useState('');
 
+  const [enteredAuthor, setEnteredAuthor] = useState('');
+
   function bodyChangeHandler(event) {
     setEnteredBody(event.target.value);
+  }
+  function authorChangeHandler(event) {
+    setEnteredAuthor(event.target.value);
   }
 
   return (
     <>
-      <NewPost onBodyChange={bodyChangeHandler} enteredBody={enteredBody} /> {/* Ensure enteredBody is passed */}
+      <NewPost onBodyChange={bodyChangeHandler} onAuthorChange={authorChangeHandler}  
+      enteredBody={enteredBody} enteredAuthor={enteredAuthor} /> {/* Ensure enteredBody is passed */}
       <ul className={classes.posts}>
-        <Post author="Maximus" body={enteredBody} />
-        <Post author="Maxi" body="Dasi" />
+        <Post author={enteredAuthor} body={enteredBody} />
+        <Post author="Maxi" body={"ssssss"} />
       </ul>
     </>
   );
