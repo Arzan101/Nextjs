@@ -22,16 +22,30 @@ function PostList() {
     setEnteredAuthor(event.target.value);
   }
 
+  // let modalContent;
+
+  // if (modalIsVisible){
+  //  modalContent= (
+  //  <Modal onClose={hideModalHandler}>
+  //     <NewPost 
+  //     onBodyChange={bodyChangeHandler}
+  //     onAuthorChange={authorChangeHandler}  
+  //     enteredBody={enteredBody} enteredAuthor={enteredAuthor} 
+  //     /> {/* Ensure enteredBody is passed */}
+  //   </Modal>
+  //  )
+  // }
+
   return (
     <>
-    {modalIsVisible ? (<Modal onClose={hideModalHandler}>
-      <NewPost 
-      onBodyChange={bodyChangeHandler}
-      onAuthorChange={authorChangeHandler}  
-      enteredBody={enteredBody} enteredAuthor={enteredAuthor} 
-      /> {/* Ensure enteredBody is passed */}
-    </Modal>) : false}
-    
+     {modalIsVisible && ( 
+      <Modal onClose={hideModalHandler}>
+       <NewPost 
+       onBodyChange={bodyChangeHandler}
+       onAuthorChange={authorChangeHandler}  
+       enteredBody={enteredBody} enteredAuthor={enteredAuthor} 
+       /> {/* Ensure enteredBody is passed */}
+       </Modal>)}
       <ul className={classes.posts}>
         <Post author={enteredAuthor} body={enteredBody} />
         <Post author="Maxi" body={"ssssss"} />
