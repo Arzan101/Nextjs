@@ -1,11 +1,11 @@
+
 .posts {
-    list-style: none;
-    max-width: 50rem;
-    margin: 1rem auto;
-    padding: 1rem 0;
-    display: grid;
-    gap: 1rem;
-    background-color: aliceblue;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: center;
-  }
+  list-style: none;
+  max-width: 50rem;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+}
