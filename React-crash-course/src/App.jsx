@@ -44,7 +44,7 @@ function App() {
           isPosting={modalIsVisible}
           onStopPosting={hideModalHandler}
         />
-      </main>
+      </main> 
     </>
   );
 }
