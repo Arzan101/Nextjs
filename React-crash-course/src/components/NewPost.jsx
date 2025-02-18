@@ -52,7 +52,7 @@ function NewPost({ onCancel }) {
         <button type="button" onClick={onCancel}>Cancel</button>
         <button>Submit</button>
       </p>
-    </form>
+    </form>  
   );
 }
 
