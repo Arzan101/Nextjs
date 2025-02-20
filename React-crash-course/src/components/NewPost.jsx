@@ -1,7 +1,7 @@
 import classes from './NewPost.module.css';
 import { useState } from 'react';
 
-function NewPost({ onCancel }) {
+function NewPost({ onCancel,  onAddpost}) {
   const [enteredBody, setEnteredBody] = useState('');
   const [enteredAuthor, setEnteredAuthor] = useState('');
 
@@ -21,6 +21,7 @@ function NewPost({ onCancel }) {
     };
     console.log(postData);
     onCancel();  // Close the modal after submitting
+    onAddpost(postData);
   }
 
   return (
