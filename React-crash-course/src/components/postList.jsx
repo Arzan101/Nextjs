@@ -1,4 +1,4 @@
-import NewPost from "./NewPost";
+import NewPost from "../routes/NewPost";
 import Post from "./post";
 import classes from "./postList.module.css"; 
 import { useEffect, useState } from "react";
