@@ -2,10 +2,10 @@ import NewPost from "../routes/NewPost";
 import Post from "./post";
 import classes from "./postList.module.css"; 
 import { useEffect, useState } from "react";
-import Modal from "./Modal";
 
 
-function PostList({isPosting,onStopPosting}) {
+
+function PostList({}) {
    
   const[posts,setPosts] =useState([])
 
@@ -30,11 +30,7 @@ function PostList({isPosting,onStopPosting}) {
   }
   return (
     <>
-     {isPosting && ( 
-      <Modal onClose={onStopPosting}>
-       <NewPost onCancel ={onStopPosting} onAddpost={addPostHandler}
-       /> 
-       </Modal>)}
+    
        {posts.length>0 && (<ul className={classes.posts}>
         {posts.map((post)=> <Post key={post} author={post.author} body={post.body}/> 
       )}

@@ -11,8 +11,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
-      { path: '/', element: <Posts/>},
-      { path: '/create-post', element: <NewPost /> },
+      { path: '/', 
+        element: <Posts/>,
+        children:[{ path: '/create-post', element: <NewPost />}]
+      },
     ],
   },
 ]);
